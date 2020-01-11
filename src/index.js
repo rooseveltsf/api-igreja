@@ -11,4 +11,4 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.use('/users', user)
 
 
-app.listen(3003)
+app.listen(3000)
