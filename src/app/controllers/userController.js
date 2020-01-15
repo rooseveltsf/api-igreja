@@ -3,7 +3,7 @@ const User = require('../models/user')
 
 const router = express.Router()
 
-router.post('/', async (req, res) => {
+router.post('/users', async (req, res) => {
     try {
         const duvida = await User.create(req.body)
         res.send(duvida).status(200)
@@ -12,7 +12,7 @@ router.post('/', async (req, res) => {
     }
 })
 
-router.get('/', async (req, res) => {
+router.get('/users', async (req, res) => {
     try {
         const duvidas = await User.find()
 
@@ -22,7 +22,7 @@ router.get('/', async (req, res) => {
     }
 })
 
-router.delete('/:id', async (req, res) => {
+router.delete('/users/:id', async (req, res) => {
     try {
         await User.findByIdAndRemove(req.params.id)
 

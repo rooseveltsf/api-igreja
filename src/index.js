@@ -9,7 +9,7 @@ const app = express()
 app.use(cors())
 app.use(bodyParser.urlencoded({ extended: true }))
 
-app.use('/users', user)
+app.use(user)
 
 
 app.listen(process.env.PORT || 3000)
