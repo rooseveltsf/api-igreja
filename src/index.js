@@ -7,6 +7,7 @@ const user = require("./app/controllers/userController")
 const app = express()
 
 app.use(cors())
+app.use(express.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 
 app.use(user)
